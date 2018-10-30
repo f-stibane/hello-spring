@@ -8,7 +8,7 @@ pipeline:
 
   containerize:
     image: plugins/docker
-    repo: hello-spring
+    repo: 172.17.0.1:5000/hello-spring
     registry: 172.17.0.1:5000
     tags: latest
     insecure: true
