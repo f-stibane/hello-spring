@@ -3,3 +3,5 @@ pipeline:
     image: maven
     commands:
       - mvn clean package
+    volumes:
+      - m2-repository-cache:/root/.m2/repository
