@@ -5,3 +5,8 @@ pipeline:
       - mvn clean package
     volumes:
       - m2-repository-cache:/root/.m2/repository
+
+  containerize:
+    image: plugins/docker
+    repo: 172.17.0.1:5000/hello-spring
+    tags: latest
