@@ -3,7 +3,7 @@ name: default
 
 steps:
 - name: build
-  image: maven
+  image: maven:3.5.4-jdk-8-alpine
   commands:
   - mvn clean package
   volumes:
