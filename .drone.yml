@@ -10,7 +10,7 @@ steps:
   - name: m2-repository-cache
     path: /root/.m2/repository
 
-- name: containerize
-  image: plugins/docker
-  repo: hello-spring
-  tags: latest
+# - name: containerize
+#   image: plugins/docker
+#   repo: hello-spring
+#   tags: latest
