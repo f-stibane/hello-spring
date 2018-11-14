@@ -7,7 +7,8 @@ steps:
   commands:
   - mvn clean package
   volumes:
-  - m2-repository-cache:/root/.m2/repository
+  - name: m2-repository-cache
+    path: /root/.m2/repository
 
 - name: containerize
   image: plugins/docker
