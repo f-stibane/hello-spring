@@ -14,3 +14,8 @@ steps:
 #   image: plugins/docker
 #   repo: hello-spring
 #   tags: latest
+
+volumes:
+- name: m2-repository-cache
+  host:
+    path: /opt/m2-repository
