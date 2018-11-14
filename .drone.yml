@@ -1,14 +1,15 @@
-pipeline:
-  build:
-    image: maven
-    commands:
-      - mvn clean package
-    volumes:
-      - m2-repository-cache:/root/.m2/repository
+kind: pipeline
+name: default
 
-  containerize:
-    image: plugins/docker
-    repo: 172.17.0.1:5000/hello-spring
-    registry: 172.17.0.1:5000
-    tags: latest
-    insecure: true
+steps:
+- name: build
+  image: maven
+  commands:
+  - mvn clean package
+  volumes:
+  - m2-repository-cache:/root/.m2/repository
+
+- name: containerize
+  image: plugins/docker
+  repo: hello-spring
+  tags: latest
